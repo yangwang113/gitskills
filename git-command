@@ -1,3 +1,16 @@
+安装完成后，还需要最后一步设置，在命令行输入：
+	git config --global user.name "Your Name"
+	git config --global user.email "email@example.com"
+	
+初始化一个Git仓库，使用git init命令。
+	git init
+
+添加文件到Git仓库，分两步：
+使用命令git add <file>，注意，可反复多次使用，添加多个文件；
+	git add <file>
+使用命令git commit -m <message>，完成。
+	git commit -m <message>
+
 查看远程库信息，
 	git remote -v；
 
@@ -5,7 +18,7 @@
 
 从本地推送分支,如果推送失败，先用git pull抓取远程的新提交；
 	git push origin branch-name
-i
+
 在本地创建和远程分支对应的分支，本地和远程分支的名称最好一致；
 	git checkout -b branch-name origin/branch-name
 	git switch -c branch-name origin/branch-name
