@@ -69,12 +69,30 @@ HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历�
 
 合并某分支到当前分支：
 	git merge <name>
+	
+普通模式合并，合并后的历史有分支，能看出来曾经做过合并
+	git merge --no-ff -m "change msg" branch-name
 
 删除分支：
 	git branch -d <name>
 
+查看分支合并图
+	git log --graph
 
+【Bug分支】
+保存工作现场
+	git stash
+查看保存的工作现场
+	git stash list
+恢复保存的工作现场
+	git stash apply **
+恢复后删除保存的工作现场
+	git stash drop
+直接恢复保存的工作现场并删除stash内容
+	git stash pop
 
+在master分支上修复的bug，想要合并到当前dev分支，可以用git cherry-pick <commit>命令，把bug提交的修改“复制”到当前分支，避免重复劳动
+	git cherry-pick <commit>
 
 
 
