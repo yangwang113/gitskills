@@ -129,3 +129,11 @@ HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历�
 
 从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
 	git pull
+
+【创建标签】
+命令git tag <tagname>用于新建一个标签，默认为HEAD，也可以指定一个commit id；
+	git tag <tagname>
+命令git tag -a <tagname> -m "blablabla..."可以指定标签信息；
+	git tag -a <tagname> -m "blablabla..."
+命令git tag可以查看所有标签。
+	git tag
